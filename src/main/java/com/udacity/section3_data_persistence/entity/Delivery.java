@@ -22,6 +22,15 @@ public class Delivery {
     @Column(name = "address_full", length = 500)
     private String address;
     private LocalDateTime deliveryTime;
+
+    public List<Plant> getPlants() {
+        return plants;
+    }
+
+    public void setPlants(List<Plant> plants) {
+        this.plants = plants;
+    }
+
     @Type(type = "yes_no")
     private Boolean completed;
 
